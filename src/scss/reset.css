@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stylish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Fjalla+One&family=Ramaraja&family=Stylish&display=swap");
+@import url(//db.onlinewebfonts.com/c/40f13db0010c6e1d4b268c00ce83ef29?family=GilgameshW01-Bold);
+@import url(//db.onlinewebfonts.com/c/306a4aef65f07417ffdcf47292e995b6?family=PeriodicoW03-DsplBlack);
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,800;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
+/* font-family: 'Kanit', sans-serif;
+font-family: 'Libre Bodoni', serif;
+font-family: 'Martel Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Spectral', serif; */
+
+@font-face {
+  font-family: "Dimbo Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Dimbo Regular"), url("Dimbo Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Dimbo Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Dimbo Italic"), url("Dimbo Italic.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Dimbo Regular", serif;
+
+  text-decoration: none;
+  color: #fff;
+}
+h1,
+h2 {
+  /* font-family: "Playfair Display", serif; */
+  font-weight: 900;
+}
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+html {
+  scroll-behavior: smooth;
+}
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+button.owl-prev {
+  justify-content: center;
+}
+button.owl-next {
+  justify-content: center;
+}
+button.owl-prev span,
+button.owl-next span {
+  transform: scale(1.5);
+  display: inline-block;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 11px 22px !important;
+  font: inherit;
+  background: none !important;
+  border-radius: 100px !important;
+  top: -40px;
+  position: absolute;
+  border: 1px solid #747373;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 24px;
+  height: 7px;
+  margin: 5px 3px;
+  background: none;
+  border: 1px solid black;
+}
+.owl-theme .owl-dots .owl-dot {
+  width: 30px;
+}
+.owl-theme .owl-dots {
+  padding: 20px 0;
+}
+button.owl-next {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%);
+}
+button.owl-prev {
+  position: absolute;
+  top: 40%;
+  right: 51px;
+  transform: translateY(-50%);
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: black !important;
+}
+.owl-stage {
+  /* transition: all 2s ease 0s !important; */
+}
+.makeStyles-heading-2 {
+  font-size: 18px !important;
+  font-weight: 400;
+}
+.MuiTypography-body1 {
+  font-size: 18px !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+@media (max-width: 570px) {
+  button {
+    font-size: 15px !important;
+  }
+}

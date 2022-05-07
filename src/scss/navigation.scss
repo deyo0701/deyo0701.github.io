@@ -1,0 +1,250 @@
+@import "./variable.scss";
+@import "./media.scss";
+header {
+  // border-bottom: 1px solid #a9a1a14d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  // background: #1a1919;
+  transition: 0.3s all;
+
+  .outer {
+    position: relative;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      .nav__grid {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 2.5fr 1fr;
+        padding: 15px 10px;
+        position: relative;
+        .logo {
+          justify-self: start;
+         h2{
+          font-weight: 100;
+          text-shadow: 0 0 5px #e91e63;
+         }
+        }
+        nav {
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            > li {
+              margin-right: 1rem;
+              position: relative;
+              transition: 0.3s all;
+              font-size: 18px;
+
+              -webkit-transition: 0.3s all;
+              -moz-transition: 0.3s all;
+              -ms-transition: 0.3s all;
+              -o-transition: 0.3s all;
+              > a {
+                transition: 0.3s all;
+                -webkit-transition: 0.3s all;
+                -moz-transition: 0.3s all;
+                -ms-transition: 0.3s all;
+                -o-transition: 0.3s all;
+                font-weight: 100;
+                font-size: 1.5rem;
+                text-shadow: 10px 4px 27px black;
+                &:hover {
+                  color:$main;
+               
+                }
+              }
+            }
+            > li::before {
+              position: absolute;
+              content: "";
+              position: absolute;
+              bottom: -10px;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              transition: 0.3s all ease-out;
+              background-color: $main;
+            }
+            > li:hover::before {
+              width: 100%;
+            }
+          }
+        }
+        .nav__btns {
+          justify-self: end;
+          justify-self: end;
+          display: flex;
+          align-items: center;
+          a{
+            margin-right:5px;
+            -webkit-user-select: auto;
+            user-select: auto;
+            pointer-events: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 43px;
+            width: 45px;
+            border-radius: 10px;
+            align-items: center;
+            background: #e91e63;
+          }
+          svg {
+            transform: scale(2);
+            margin: 0 20px;
+            cursor: pointer;
+            transition: .3s all;
+            filter: drop-shadow(2px 4px 12px black);
+            -webkit-transition: .3s all;
+            -moz-transition: .3s all;
+            -ms-transition: .3s all;
+            -o-transition: .3s all;
+            -webkit-filter: drop-shadow(2px 4px 12px black);
+            fill: #fff;
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -ms-transform: scale(2);
+            -o-transform: scale(2);
+            &:hover 
+         
+{
+              fill: #fff;
+            }
+}
+          > button {
+            cursor: pointer;
+            padding: 9px 20px;
+            @include sm {
+              padding: 9px 15px;
+            }
+            font-size: 18px;
+            border-radius: 4px;
+            border: 0;
+            outline: none;
+            margin-right: 5px;
+            display: flex;
+            background: linear-gradient(45deg, $main, #e91e63);
+            font-weight: 400;
+            box-shadow: 0 0 15px #0000004d;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s all;
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            text-transform: uppercase;
+            font-family: "Spectral";
+            > img {
+              width: 15px;
+              filter: invert(1);
+            
+            }
+          }
+          > button:hover {
+            background-color: $main;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav__active {
+  background: #1f1f1f;
+  backdrop-filter: blur(1px);
+}
+.auto_scroll {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  transition: 0.3s all;
+  z-index: 1001;
+  transform: scale(0);
+  > i {
+    width: 50px;
+    background: $main;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 100px;
+    border: 1px solid 1px solid #70696945;
+    box-shadow: #111111 0px 2px 6px,inset 0 0 23px #0000004d;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+  
+    align-items: center;
+    color: #fff;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .nav__grid {
+      .nav__btns {
+        > i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 0) and (max-width: 992px) {
+  header {
+    .nav__grid {
+      grid-template-columns: 1fr 1.5fr !important;
+      .logo {
+      }
+      nav {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 100;
+        overflow: hidden;
+        ul {
+          justify-content: start !important;
+          transition: 0.3s all ease-out;
+          flex-direction: column;
+          margin-top: -200%;
+          border-bottom: 1px solid #70696945;
+          z-index: 1000;
+          align-items: flex-start !important;
+          background: #000000eb;
+          padding: 15px 10px;
+          font-size: 1.4rem;
+          li {
+            margin-right: unset;
+            margin-bottom: 15px;
+          }
+        }
+        .ul__active {
+          margin-top: 0% !important;
+        }
+      }
+      .nav__btns {
+        a{
+         
+        }
+        > i {
+          color: #fff;
+          background: #e91e63;
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 43px;
+          // margin-left: 5px;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

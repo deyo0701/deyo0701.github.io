@@ -1,0 +1,82 @@
+@import "./variable.scss";
+@import "./media.scss";
+
+footer {
+  background: #000000;
+  position: relative;
+  border-top: 1px solid #e0e0e00a;
+
+  >.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+
+    >.grid {
+      .logo {
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        img {
+          max-width: 100px;
+        }
+      }
+
+      >.icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >div:nth-child(3) {
+          margin-right: 0;
+        }
+
+        a {
+          -webkit-user-select: auto;
+          user-select: auto;
+          pointer-events: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: $main;
+          height: 45px;
+          border-radius: 10px;
+          width: 45px;
+          align-items: center;
+        }
+
+        .item {
+          margin-right: 2rem;
+
+          svg {
+            transform: scale(2);
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -ms-transform: scale(2);
+            -o-transform: scale(2);
+            transition: .3s all;
+            -webkit-transition: .3s all;
+            -moz-transition: .3s all;
+            -ms-transition: .3s all;
+            -o-transition: .3s all;
+            fill: #fff;
+            &:hover 
+{
+              
+            }
+          }
+
+          cursor: pointer;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: #ccc;
+        font-weight: 300;
+        margin-top: 30px;
+      }
+    }
+  }
+}
